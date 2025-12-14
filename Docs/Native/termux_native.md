@@ -9,6 +9,7 @@ Full Termux Desktop installation guide, manual
 - **[Install your desired applications](#app-install-bhai)**
 - **[Install the Desktop](#desktop-install-bhai)**
 - **[Install Desktop startup scripts](#script-download)**
+- **[How to use the Desktop](#desktop-usage)**
 - **[Troubleshooting and Fixes](#fix-problem-termux)**
 
 <br>
@@ -344,6 +345,14 @@ Remember it is not Hardware Accelerated, so the performance will be slow. If you
 </details>
 
 **Desktop startup script installation is done**
+
+---
+<br>
+
+## How to use the Desktop <a name=desktop-usage></a>
+In order to know how to use the desktop, what's the command to start the desktop, how to use PRoot applications on Termux native and many other utilities, just tap on *Click here* button
+
+### [Click here](/Docs/Termux/desktop-usage)
 
 ---
 <br>
