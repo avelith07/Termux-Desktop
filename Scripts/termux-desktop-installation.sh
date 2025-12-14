@@ -78,11 +78,14 @@ echo -e "${BOLD_YELLOW}Installing & Configuring HWA... (only for Vulkan-supporte
 termux-tts-speak "Reminder for user input" > /dev/null 2>&1
 
 while true; do
-  echo -e "${BOLD_CYAN}Do you have a Mali GPU with Vulkan support?${RESET}"
-  echo -e "${BOLD_YELLOW}1) Yes (Zink HWA with Vulkan Wrapper Android)${RESET}"
-  echo -e "${BOLD_YELLOW}2) No (CPU-only)${RESET}"
-
-  read -p "Enter your choice [1-2]: " choice
+  echo -e "${BOLD_CYAN}What GPU do you have?${RESET}"
+  echo -e "${BOLD_YELLOW}1) Mali with Vulkan-supported (HWA Supported)${RESET}"
+  echo -e "${BOLD_YELLOW}2) Adreno 6xx/7xx, except Adreno 710, 642L, 720 & 730 (HWA Supported)${RESET}"
+  echo -e "${BOLD_YELLOW}3) Other Adreno GPUs (CPU-only)${RESET}"
+  echo -e "${BOLD_YELLOW}4) Mali without Vulkan support or PowerVR (CPU-only)${RESET}"
+  echo -e "${BOLD_YELLOW}5) CPU Rasterizer (Only if you don't meet above criteria)${RESET}"
+  
+  read -p "Enter your choice [1-4]: " choice
 
   case $choice in
     1)
@@ -126,6 +129,62 @@ https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/head
       break
       ;;
     2)
+      echo -e "${BOLD_YELLOW}Installing & Configuring HWA...${RESET}"
+
+      mkdir -p ~/Temp-HWA
+      cd ~/Temp-HWA
+     
+      apt install -y mesa-zink mesa-zink-dev virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android \
+libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd
+      apt install mesa-vulkan-icd-freedreno-dri3
+      apt --fix-broken install -y
+
+      wget -O vulkan-icd.deb \
+https://github.com/Prime-TITAN-CameraMan/Termux-Desktop/releases/download/v25.0.0-2/vulkan-wrapper-android_25.0.0-2_aarch64.deb
+
+      apt install -y ./vulkan-icd.deb
+      apt --fix-broken install -y
+
+      cd ~
+      rm -rf ~/Temp-HWA
+
+      pkg install -y glmark2
+      pkg install -y vkmark
+
+      mkdir -p ~/bin
+      cd ~/bin
+
+      wget -O termux-xfce4 \
+https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/DE%20Startup%20Scripts/termux-xfce4-adreno.sh
+
+      chmod +x termux-xfce4
+      cd ~
+
+      break
+      ;;
+    3)
+      echo -e "${BOLD_YELLOW}Skipping HWA...${RESET}"
+
+      mkdir -p ~/bin
+      cd ~/bin
+
+      wget -O termux-xfce4 \
+https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/DE%20Startup%20Scripts/termux-xfce4-cpu.sh
+            
+      break
+      ;;
+    4)
+      echo -e "${BOLD_YELLOW}Skipping HWA...${RESET}"
+
+      mkdir -p ~/bin
+      cd ~/bin
+
+      wget -O termux-xfce4 \
+https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/DE%20Startup%20Scripts/termux-xfce4-cpu.sh
+      
+      break
+      ;;
+    5)
       echo -e "${BOLD_YELLOW}Skipping HWA...${RESET}"
 
       mkdir -p ~/bin
@@ -134,13 +193,11 @@ https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/head
       wget -O termux-xfce4 \
 https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/DE%20Startup%20Scripts/termux-xfce4-cpu.sh
 
-      chmod +x termux-xfce4
-      cd ~
-
       break
       ;;
     *)
-      echo -e "${BOLD_RED}Invalid option. Please try again.${RESET}"
+      echo -e "{BLOD_RED}Invalid option, please try again!"
+      sleep 1
       ;;
   esac
 done
