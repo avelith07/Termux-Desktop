@@ -352,7 +352,7 @@ Remember it is not Hardware Accelerated, so the performance will be slow. If you
 ## How to use the Desktop <a name=desktop-usage></a>
 In order to know how to use the desktop, what's the command to start the desktop, how to use PRoot applications on Termux native and many other utilities, just tap on *Click here* button
 
-### [Click here](/Docs/Termux/termux-desktop-usage.md)
+### [Click here](/Docs/Termux/termux_desktop_usage.md)
 
 ---
 <br>
