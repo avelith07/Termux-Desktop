@@ -1,6 +1,9 @@
 # Termux-Desktop
 **Install a full Linux desktop environment on your Android device with Termux X11 and also with hardware acceleration alongwith desktop audio functional**
 
+### Initial release 
+If you find any error, bug, glitch or something is not working. Please contact me on my Discord server, link is on the repository website, or create a issue.
+
 ---
 <br>
 
