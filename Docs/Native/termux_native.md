@@ -113,8 +113,16 @@ If you have Mali GPU with Vulkan-supported or Adreno 6xx/7xx (except: 710, 642L,
 <details>
   <summary>Tap if you have Vulkan supported Mali GPU</summary>
 
-Install `mesa-zink`, `mesa-zink-dev` and following packages
+Download a stable build of `mesa-zink`, `mesa-zink-dev`:
 ```
+mkdir -p ~/Temp-HWA-TCM
+cd ~/Temp-HWA-TCM
+wget -O mesa-zink_23.0.4-5_aarch64.deb https://github.com/Prime-TITAN-CameraMan/Termux-Desktop/releases/download/v23.0.4-5/mesa-zink_23.0.4-5_aarch64.deb
+wget -O mesa-zink-dev_23.0.4-5_all.deb https://github.com/Prime-TITAN-CameraMan/Termux-Desktop/releases/download/v23.0.4-5/mesa-zink-dev_23.0.4-5_all.deb
+```
+Install them and following packages:
+```
+apt install -y ./*.deb
 apt install -y virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd 
 
 apt --fix-broken install -y
@@ -142,7 +150,7 @@ rm -rf ~/Temp-HWA-TCM
 
 Install `mesa-zink` and other packages using the following command:
 ```
-apt install -y virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd mesa-vulkan-icd-freedreno-dri3
+apt install -y mesa-zink mesa-zink-dev virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd mesa-vulkan-icd-freedreno-dri3
 
 apt --fix-broken install -y
 ```
