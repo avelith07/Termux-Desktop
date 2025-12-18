@@ -359,9 +359,14 @@ pkg install -y xfce4
 pkg install -y xfce4-goodies
 pkg install -y xfce4-whiskermenu-plugin
 pkg install -y xfce4-battery-plugin
+pkg install -y xfce4-cpugraph-plugin
+pkg install -y xfce4-docklike-plugin
+pkg install -y xfce4-genmon-plugin
+pkg install -y xfce4-places-plugin
+pkg install -y xfce4-pulseaudio-plugin
+pkg install -y xfce4-screenshooter
 pkg install -y xfce4-taskmanager
 pkg install -y fastfetch
-pkg install -y xfce4-screenshooter
 pkg install -y mousepad
 pkg install -y cava
 
