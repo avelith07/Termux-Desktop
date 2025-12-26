@@ -69,7 +69,7 @@ Run it and enjoy!
 ./termux-desktop-installation.sh
 ```
 
-> [!NOTE]
+> [!TIP]
 > During the installation it will ask for user to input, but if you have Termux API installed, then the script will use TTS to remind you
 
 > [!WARNING]
