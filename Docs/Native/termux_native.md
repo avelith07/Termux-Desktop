@@ -190,6 +190,7 @@ wget -O proot_program https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Te
 wget -O termux-fastest-repo https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/bin/termux-fastest-repo
 wget -O desktop-help https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/bin/desktop-help
 wget -O termux-multi-instance https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/bin/termux-multi-instance
+wget -O extract https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/heads/main/bin/extract
 ```
 Give executable permission to those scripts:
 ```
@@ -199,6 +200,7 @@ chmod +x proot_program
 chmod +x termux-multi-instance
 chmod +x termux-fastest-repo
 chmod +x desktop-help
+chmod +x extract
 ```
 Now run following commands to add the directory to the path for executing those scripts anywhere:
 ```
