@@ -501,10 +501,10 @@ while true; do
 proot-distro login debian --shared-tmp -- /bin/bash << 'EOF'
 apt update
 apt install -y wget
-wget -O vesktop_1.6.1_arm64.deb https://github.com/Vencord/Vesktop/releases/download/v1.6.1/vesktop_1.6.1_arm64.deb
-apt install -y ./vesktop_1.6.1_arm64.deb
+wget -O vesktop_1.6.3_arm64.deb https://github.com/Vencord/Vesktop/releases/download/v1.6.3/vesktop_1.6.3_arm64.deb
+apt install -y ./vesktop_1.6.3_arm64.deb
 apt --fix-broken install -y
-rm -rf vesktop_1.6.1_arm64.deb
+rm -rf vesktop_1.6.3_arm64.deb
 EOF
 
       echo -e "${BOLD_GREEN}Discord Installed Successfully!${RESET}"
@@ -525,10 +525,10 @@ EOF
 proot-distro login debian --shared-tmp -- /bin/bash << 'EOF'
 apt update
 apt install -y wget
-wget -O vesktop_1.6.1_arm64.deb https://github.com/Vencord/Vesktop/releases/download/v1.6.1/vesktop_1.6.1_arm64.deb
-apt install -y ./vesktop_1.6.1_arm64.deb
+wget -O vesktop_1.6.3_arm64.deb https://github.com/Vencord/Vesktop/releases/download/v1.6.3/vesktop_1.6.3_arm64.deb
+apt install -y ./vesktop_1.6.3_arm64.deb
 apt --fix-broken install -y
-rm -rf vesktop_1.6.1_arm64.deb
+rm -rf vesktop_1.6.3_arm64.deb
 EOF
 
       pkg update > /dev/null 2>&1
