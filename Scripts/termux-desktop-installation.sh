@@ -73,8 +73,8 @@ termux-tts-speak "If you want other permissions visit official websites of Termu
 sleep 2
 clear
 
-# HWA Setup (Mali)
-echo -e "${BOLD_YELLOW}Installing & Configuring HWA... (only for Vulkan-supported Mali devices)${RESET}"
+# HWA Setup
+echo -e "${BOLD_YELLOW}Installing & Configuring HWA...${RESET}"
 termux-tts-speak "Reminder for user input" > /dev/null 2>&1
 
 while true; do
