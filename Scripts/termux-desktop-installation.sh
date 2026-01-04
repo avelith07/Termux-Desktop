@@ -85,7 +85,7 @@ while true; do
   echo -e "${BOLD_YELLOW}4) Mali without Vulkan support or PowerVR (CPU-only)${RESET}"
   echo -e "${BOLD_YELLOW}5) CPU Rasterizer (Only if you don't meet above criteria)${RESET}"
   
-  read -p "Enter your choice [1-4]: " choice
+  read -p "Enter your choice [1-5]: " choice
 
   case $choice in
     1)
@@ -102,6 +102,7 @@ https://github.com/Prime-TITAN-CameraMan/Termux-Desktop/releases/download/v23.0.
 https://github.com/Prime-TITAN-CameraMan/Termux-Desktop/releases/download/v23.0.4-5/mesa-zink-dev_23.0.4-5_all.deb
 
       apt install -y ./*.deb
+      apt --fix-broken install -y
       apt install -y virglrenderer-mesa-zink vulkan-loader-generic angle-android virglrenderer-android \
 libandroid-shmem libc++ libdrm libx11 libxcb libxshmfence libwayland zlib zstd
 
@@ -196,7 +197,7 @@ https://raw.githubusercontent.com/Prime-TITAN-CameraMan/Termux-Desktop/refs/head
       break
       ;;
     *)
-      echo -e "{BOLD_RED}Invalid option, please try again!${RESET}"
+      echo -e "${BOLD_RED}Invalid option, please try again!${RESET}"
       sleep 1
       ;;
   esac
