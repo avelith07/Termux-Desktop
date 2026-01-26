@@ -9,7 +9,7 @@ GL Hardware Acceleration for Adreno 6xx/7xx GPUs *(except few specific ones, men
 
 ## Navigation
 - **[Requirements](#termux-needs)**
-- **[First Steps](#first-steps)** — 
+- **[First Steps](#first-steps)** 
 - **[Native VS PRoot](#choose-linux)** 
 - **[Native & PRoot Details Sheet](#comparing-sheet)** 
 - **[How to install Full Termux Desktop (manually)](#termux-native)** 
