@@ -100,7 +100,7 @@ rm -rf ~/Temp-HWA-PTCM
 <br>
 
 <details>
-  <summary>Tap, for Mali GPU HWA setup</summary>
+  <summary>Tap, for Adreno GPU HWA setup</summary>
 
 ## Adreno GPU Hardware Acceleration setup
 This setup is for Adreno 6xx/7xx (except: 710, 642L, 720 & 730) GPUs, if you have Mali GPU, scroll up and follow the Mali setup, or if you have any other Adreno GPU then skip hardware acceleration.
