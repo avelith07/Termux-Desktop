@@ -3,4 +3,4 @@ vncserver -kill :1 2>/dev/null
 vncserver -localhost no :1 \
   -geometry 1280x720 \
   -depth 16
-websockify --web /data/data/com.termux/files/home/Git-TCM/noVNC 6080 localhost:5901
+websockify --web /data/data/com.termux/files/home/Git-TCM/noVNC 6080 localhost:5901 &
