@@ -9,7 +9,8 @@
 **Anyone interested is welcome to fork the project and continue development.**
 
 ### Potential Issues
-GL Hardware Acceleration for Adreno 6xx/7xx GPUs *(except few specific ones, mentioned in the hwa setup)* may not work. Vulkan acceleration may work but GL may not. Since I do not have a Adreno GPU, one of you Adreno 6xx/7xx users have to contact for on Discord, so I can test what is happening
+GL Hardware Acceleration for Adreno 6xx/7xx GPUs *(except few specific ones, mentioned in the hwa setup)* will not work. Vulkan acceleration may work but GL will not. Since I do not have a Adreno GPU, I don't know what is happening. Feels 
+free to fork the project and continue development.
 
 ---
 <br>
